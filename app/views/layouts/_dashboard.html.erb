@@ -1,0 +1,19 @@
+<% if logged_in? %>
+  <ul class="nav navbar-fixed-left">
+    <li class="nav-item">
+      <div class="brand">
+        <%= image_tag "sun-logo.png", id:"logo" %>
+        <span><%= t("education")%></span>
+      </div>
+    </li>
+    <% if logged_in_user_as_trainer? %>
+      <li class="nav-item"><%= link_to t("trainer_courses"), trainer_courses_path %></li>
+      <li class="nav-item"><%= link_to t("subjects"), "#" %></li>
+      <li class="nav-item"><%= link_to t("trainees"), "#" %></li>
+    <% elsif logged_in_user_as_trainee? %>
+      <li class="nav-item"><%= link_to t("my_courses"), "#" %></li>
+      <li class="nav-item"><%= link_to t("report_history"), "#" %></li>
+      <li class="nav-item"><%= link_to t("daily_report"), "#" %></li>
+    <% end %>
+  </ul>
+<% end %>

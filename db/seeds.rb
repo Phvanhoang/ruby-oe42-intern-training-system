@@ -113,12 +113,13 @@ Subject.create!(name: "Scrum",
   order: 7,
   course_id: 4)
 
-99.times do |n|
-  name = Faker::Lorem.sentence(word_count: 5)
-  subject_id = Faker::Number.within(range: 1..6)
-  Task.create!(name: name,
-  subject_id: subject_id)
-end
+  99.times do |n|
+    name = Faker::Lorem.sentence(word_count: 5)
+    subject_id = Faker::Number.within(range: 1..6)
+    Task.create!(name: name,
+      subject_id: subject_id)
+  end
+
 
 99.times do |n|
   course_id = Faker::Number.within(range: 1..6)
@@ -131,7 +132,8 @@ end
     course_id: course_id,
     user_id: user_id,
     start_date: start_date,
-    end_date: end_date)
+    end_date: end_date
+  )
 end
 
 99.times do |n|
@@ -145,7 +147,8 @@ end
     subject_id:subject_id,
     user_course_id: user_course_id,
     start_date: start_date,
-    end_date: end_date)
+    end_date: end_date
+  )
 end
 
 99.times do |n|

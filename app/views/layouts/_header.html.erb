@@ -1,8 +1,13 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <p id="logo"><%= t ".name_app" %></p>
+  <div class="header-container">
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to image_tag("american.jpg", class: "local_image"), locale: :en %>
+        </li>
+        <li>
+          <%= link_to image_tag("vietnam.jpg", class: "local_image"), locale: :vi %>
+        </li>
         <li><%= link_to t("static_pages.home.title"), root_path %></li>
         <li><%= link_to t("static_pages.help.title"), help_path %></li>
         <% if logged_in? %>

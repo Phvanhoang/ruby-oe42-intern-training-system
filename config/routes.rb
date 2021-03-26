@@ -6,5 +6,8 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     resources :users, only: :show
+    namespace :trainer do
+      resources :courses
+    end
   end
 end

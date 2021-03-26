@@ -10,4 +10,12 @@ module SessionsHelper
   def logged_in?
     current_user.present?
   end
+
+  def logged_in_user_as_trainer?
+    current_user.trainer?
+  end
+
+  def logged_in_user_as_trainee?
+    current_user.trainee?
+  end
 end

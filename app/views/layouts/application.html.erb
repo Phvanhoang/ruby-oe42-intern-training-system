@@ -12,13 +12,19 @@
     <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
   </head>
   <body>
-    <div class="container">
-      <%= raw custom_bootstrap_flash %>
-      <%= render "layouts/header" %> 
-      <%= link_to t("to_en"), locale: :en %>
-      <%= link_to t("to_vi"), locale: :vi %>
+    <%= raw custom_bootstrap_flash %>
+    <% if logged_in? %>
+      <div id="dashboard">
+        <%= render "layouts/dashboard" %>
+      </div>
+      <div id="content">
+        <%= render "layouts/header" %>
+        <%= yield %>
+        <%= debug(params) if Rails.env.development? %>
+      </div>
+    <% elsif %>
+      <%= render "layouts/header" %>
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
-    </div>
+    <% end %>
   </body>
 </html>

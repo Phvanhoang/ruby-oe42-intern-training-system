@@ -4,10 +4,10 @@ vi:
     email: "Thư điện tử "
     password: "Mật khẩu"
     new:
-      log_in_succes: "%{user_name } đã đăng nhập thành công "
+      log_in_succes: "%{user_name} đã đăng nhập thành công "
       log_in_fail: "Đăng nhập thất bại"
     destroy:
       title: "Đăng xuất"
       bye: "Tạm biệt"
     warning: 
-      not_found: "Không tìm thấy người dùng"  
+      not_found: "Không tìm thấy người dùng"

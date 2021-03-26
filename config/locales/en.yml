@@ -1,2 +1,10 @@
 en:
   base_title: "Training System"
+  education: "Education"
+  trainer_courses: "Courses"
+  subjects: "Subjects"
+  trainees: "Trainees"
+  my_course: "My courses"
+  report_history: "Report history"
+  daily_report: "Daily report"
+  no_permissions_allowed: "No permissions allowed"
